@@ -5,9 +5,7 @@
     top: 0;
     left: 0;
     z-index: 1000;
-
     width: 100%;
-
     backdrop-filter: blur(20px);
     background: var(--header-bg);
     border-bottom: 1px solid var(--color-border);
@@ -21,7 +19,6 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-
         min-height: 80px;
         gap: 20px;
     }
@@ -29,11 +26,9 @@
     &__logo {
         position: relative;
         z-index: 12;
-
         font-size: 28px;
         font-weight: 800;
         font-family: 'Space Grotesk', sans-serif;
-
         background: var(--gradient-primary);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -42,32 +37,24 @@
     &__nav {
         width: 100%;
         max-width: 715px;
-
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 15px;
-
         transition-duration: $transitionDuration;
 
         @media (max-width: 768px) {
             position: fixed;
-
             top: 0;
             right: -100%;
-
             width: 100%;
             min-height: 100vh;
-
             flex-direction: column;
             align-items: center;
             justify-content: center;
             gap: 32px;
-
             padding: 100px 20px 40px;
-
             background: var(--color-bg);
-
             transition:
                 right $transitionDuration,
                 background-color $transitionDuration;
@@ -81,7 +68,7 @@
     &__actions {
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 20px;
     }
 
     &__burger {
@@ -92,41 +79,30 @@
         &__burger {
             position: relative;
             z-index: 12;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             width: 40px;
             height: 30px;
             min-width: 20px;
-
             cursor: pointer;
 
             span {
                 position: relative;
-
                 display: block;
-
                 width: 100%;
                 height: 2px;
-
                 background-color: var(--color-text);
-
                 transition-duration: $transitionDuration;
 
                 &::before,
                 &::after {
                     content: '';
-
                     position: absolute;
                     left: 0;
-
                     width: 100%;
                     height: 2px;
-
                     background-color: var(--color-text);
-
                     transition-duration: $transitionDuration;
                 }
 
@@ -176,30 +152,22 @@
 
     &__link {
         position: relative;
-
         color: var(--color-muted);
-
         font-weight: 500;
-
         transition:
             color $transitionDuration,
             opacity $transitionDuration;
 
         &::after {
             content: '';
-
             position: absolute;
             left: 0;
             bottom: -6px;
-
             width: 100%;
             height: 2px;
-
             background: var(--gradient-primary);
-
             transform: scaleX(0);
             transform-origin: left;
-
             transition: transform $transitionDuration;
         }
 
@@ -221,14 +189,11 @@
 .theme-toggle {
     width: 52px;
     height: 52px;
-
     border-radius: 50%;
-
+    z-index: 10;
     background: var(--color-surface);
     border: 1px solid var(--color-border);
-
     color: var(--color-text);
-
     transition:
         transform $transitionDuration,
         box-shadow $transitionDuration,
@@ -242,20 +207,14 @@
 
 .button {
     position: relative;
-
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     min-height: 58px;
     padding: 0 28px;
-
     overflow: hidden;
-
     border-radius: 18px;
-
     font-weight: 700;
-
     transition:
         transform $transitionDuration,
         background-color $transitionDuration,
@@ -264,16 +223,13 @@
 
     &--primary {
         background: var(--gradient-primary);
-
         color: #ffffff;
-
         box-shadow: var(--shadow-primary);
     }
 
     &--secondary {
         background: var(--color-surface);
         border: 1px solid var(--color-border);
-
         color: var(--color-text);
     }
 
