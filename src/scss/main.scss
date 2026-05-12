@@ -27,12 +27,9 @@ html {
 body {
     font-family: 'Inter', sans-serif;
     font-size: $fontSize;
-
     color: var(--color-text);
     background: var(--color-bg);
-
     overflow-x: hidden;
-
     transition:
         background-color 0.3s ease,
         color 0.3s ease;
