@@ -4,8 +4,8 @@
     &__timeline {
         display: grid;
         gap: 28px;
-        max-width: 900px;
         margin: 0 auto;
+        grid-template-columns: repeat(2, 1fr);
     }
 
     &__item {
@@ -63,6 +63,10 @@
 
 @media (max-width: 768px) {
     .process {
+        &__timeline {
+            grid-template-columns: 1fr;
+        }
+
         &__item {
             flex-direction: column;
             gap: 18px;
