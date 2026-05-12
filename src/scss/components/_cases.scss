@@ -3,6 +3,10 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 24px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
     }
 
     &__card {
@@ -38,6 +42,10 @@
 
     &__content {
         padding: 36px;
+
+        @media (max-width: 1200px) {
+            padding: 20px;
+        }
     }
 
     &__category {
