@@ -3,6 +3,7 @@
 
 @use 'partials/header';
 @use 'partials/footer';
+@use 'components/hero';
 
 /* =========================================================
 RESET
@@ -163,7 +164,7 @@ SECTIONS
     padding: 120px 0;
 
     @media (max-width: 768px) {
-        padding: 80px 0;
+        padding: 100px 0;
     }
 
     &__header {
@@ -198,4 +199,18 @@ SECTIONS
         font-size: 18px;
         line-height: 1.7;
     }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
 }
