@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <!-- Основна інформація -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Starter Theme Andreyk1n — навчальний проєкт</title>
+  <meta name="description"
+    content="Навчальний проєкт, створений на базі шаблону Starter Theme Andreyk1n. Демонструє структуру, компоненти та адаптивний дизайн для фронтенд розробки.">
+  <meta name="keywords"
+    content="starter theme, andreyk1n, навчальний проєкт, фронтенд, шаблон, адаптивний дизайн, веброзробка, Tailwind CSS, WordPress">
+  <meta name="author" content="Andreyk1n">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph (для соцмереж) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="uk_UA">
+  <meta property="og:title" content="Starter Theme Andreyk1n — навчальний проєкт">
+  <meta property="og:description"
+    content="Це навчальний проєкт, створений на базі шаблону Starter Theme Andreyk1n. Використовується для демонстрації структури та принципів розробки.">
+  <meta property="og:image" content="./images/favicons/android-chrome-192x192.png">
+  <meta property="og:url" content="https://example.com/">
+  <meta property="og:site_name" content="Starter Theme Andreyk1n">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Starter Theme Andreyk1n — навчальний проєкт">
+  <meta name="twitter:description"
+    content="Навчальний проєкт, створений на базі шаблону Starter Theme Andreyk1n для практики фронтенд розробки.">
+  <meta name="twitter:image" content="./images/favicons/android-chrome-192x192.png">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+  <link rel="manifest" href="./images/favicons/site.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="./images/favicons/android-chrome-192x192.png">
+  <link rel="mask-icon" href="./images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Стилі -->
+  <link rel="stylesheet" href="css/main.min.css">
+  <!-- <link rel="stylesheet" href="./swiper.min.css"> -->
+</head>
+
+<body>
+
+
+<div class="wrapper">
+  <!-- <header class="header">
+  <div class="header__container">
+    <a href="index.html" class="header__logo">
+      <img src="" alt="Header logo">
+    </a>
+    <nav class="header__nav">
+    </nav>
+    <div class="header__burger">
+      <span></span>
+    </div>
+  </div>
+</header> -->
+  
+  <!-- Перед початком роботи видаляємо цей рядок, по бажанню можна і сам компонент intro.html в папці partials -->
+  <!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Стартова тема для верстки</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .wrapper__container {
+      background-color: #ffffff;
+      color: #000000;
+      max-width: 700px;
+      width: 100%;
+      padding: 35px;
+      border: 1px solid #000000;
+      box-shadow: 8px 8px 0 0 #000000;
+      position: relative;
+    }
+
+    .wrapper__container::before {
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      right: -1px;
+      bottom: -1px;
+      border: 1px solid #000000;
+      pointer-events: none;
+    }
+
+    .wrapper__container h1 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    .wrapper__container p {
+      font-size: 16px;
+      margin-bottom: 20px;
+      font-weight: 400;
+    }
+
+    .wrapper__container a {
+      color: #000000;
+      text-decoration: none;
+      border-bottom: 2px solid #000000;
+      padding-bottom: 1px;
+      transition: opacity 0.2s ease;
+    }
+
+    .wrapper__container a:hover {
+      opacity: 0.6;
+    }
+
+    .wrapper__container ul {
+      list-style: none;
+      margin: 30px 0;
+      padding-left: 0;
+    }
+
+    .wrapper__container ul li {
+      margin-bottom: 12px;
+      position: relative;
+      padding-left: 20px;
+    }
+
+    .wrapper__container ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      font-weight: 700;
+    }
+
+    .wrapper__container p:last-child {
+      margin-top: 40px;
+      margin-bottom: 0;
+      font-size: 14px;
+      opacity: 0.5;
+    }
+
+    @media (max-width: 768px) {
+      .wrapper__container {
+        padding: 40px 30px;
+        box-shadow: 6px 6px 0 0 #000000;
+      }
+
+      .wrapper__container h1 {
+        font-size: 26px;
+      }
+
+      .wrapper__container p {
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .wrapper__container {
+        padding: 30px 20px;
+        box-shadow: 4px 4px 0 0 #000000;
+      }
+
+      .wrapper__container h1 {
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+
+      .wrapper__container p {
+        font-size: 14px;
+        margin-bottom: 15px;
+      }
+
+      .wrapper__container ul {
+        margin: 20px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper" id="wrapper">
+    <div class="wrapper__container">
+      <h1>Стартова тема для верстки</h1>
+      <p>Ця стартова тема розроблена для того, щоб зробити процес створення вебсайтів максимально зручним і ефективним. Вона містить базові налаштування, компоненти, та інструменти, які допоможуть вам швидко розпочати роботу над новими проєктами.</p>
+      <p>Тема підтримує гнучкі налаштування, сучасні підходи до верстки та відповідає стандартам розробки. Ви знайдете все необхідне для створення адаптивних і функціональних дизайнів.</p>
+      <p>Більше деталей про використання та налаштування теми ви можете знайти за посиланнями:</p>
+      <ul>
+        <li><a href="https://andreyk1n.github.io/starter-theme-docs/" target="_blank">Документація</a></li>
+        <li><a href="mailto:andrii.panasiuk2002@gmail.com">Контакти для зворотного зв'язку</a></li>
+        <li><a href="https://github.com/andreyk1n/starter-theme" target="_blank">Завантажити тему</a></li>
+      </ul>
+      <p>v. 1.6</p>
+    </div>
+  </div>
+
+  <script>
+    // Симуляція завантаження
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        document.getElementById('wrapper').classList.add('loaded');
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
+  <!-- Перед початком роботи видаляємо цей рядок, по бажанню можна і сам компонент intro.html в папці partials -->
+   
+  <!-- Якщо потрібна модалка - розкоментуйте -->
+  
+  <!-- Якщо потрібна модалка - розкоментуйте -->
+</div>
+
+
+<footer class="footer">
+</footer>
+<script src="js/functions/lazyImg.js" defer></script>
+<!-- Розкоментуйте для проведення аналізу доступності верстки -->
+<!-- <script src="js/functions/a11y-checker.js" defer></script> -->
+<!-- Розкоментуйте для проведення аналізу доступності верстки -->
+<script type="module" src="js/app.js"></script>
+
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.querySelector('.wrapper').classList.add('loaded');
+    }, 2500);
+  });
+</script>
+</body>
+
+</html>
