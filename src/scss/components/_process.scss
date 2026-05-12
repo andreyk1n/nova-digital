@@ -16,6 +16,29 @@
         border-radius: 28px;
         background: var(--color-surface);
         border: 1px solid var(--color-border);
+        transition: 0.4s ease;
+        position: relative;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg,
+                    rgba(124, 58, 237, 0.12),
+                    rgba(34, 211, 238, 0.12));
+            opacity: 0;
+            transition: 0.4s ease;
+        }
+
+        &:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-primary);
+
+            &::before {
+                opacity: 1;
+            }
+        }
     }
 
     &__number {
