@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 .reviews {
     &__grid {
         display: grid;
