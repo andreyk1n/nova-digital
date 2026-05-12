@@ -51,22 +51,16 @@
             right: -100%;
             width: 100%;
             height: 100dvh;
-
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-
             gap: 32px;
             padding: 120px 20px 60px;
-
             background: var(--color-bg);
-
             overflow-y: auto;
             overflow-x: hidden;
-
             overscroll-behavior-y: contain;
             -webkit-overflow-scrolling: touch;
-
             transition:
                 right $transitionDuration,
                 background-color $transitionDuration;
