@@ -408,86 +408,129 @@
         </div>
     </div>
 </section>
+    <div class="contact-modal" id="contacts">
+  <a href="#close" class="contact-modal__overlay"></a>
+  <div class="contact-modal__content">
+    <div class="contact-modal__left">
+      <div class="contact-modal__label">Get In Touch</div>
+      <h2 class="contact-modal__title">
+        Let’s Build Something Great Together
+      </h2>
+      <p class="contact-modal__description">
+        Tell us about your project. We’ll get back to you within 24 hours and help you plan the next steps.
+      </p>
+    </div>
+    <form class="contact-modal__form">
+      <input type="text" class="contact-modal__input" placeholder="Your Name" required>
+      <input type="email" class="contact-modal__input" placeholder="Email Address" required>
+      <textarea class="contact-modal__textarea" placeholder="Project Description"></textarea>
+      <button class="button button--primary" type="submit">
+        Send Message
+      </button>
+    </form>
+    <a href="#close" class="contact-modal__close">✕</a>
+  </div>
+</div>
 </main>
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__top">
-        <div>
-          <div class="footer__logo">Nova Digital</div>
-          <p class="footer__description">
-            Creative digital marketing agency focused on growth, branding and performance.
-          </p>
-        </div>
-        <div class="footer__nav">
-          <div>
-            <h3 class="footer__column-title">Navigation</h3>
-            <ul class="footer__list">
-              <li><a href="#about">About</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#cases">Cases</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="footer__column-title">Social</h3>
-            <ul class="footer__list">
-              <li><a href="#">Instagram</a></li>
-              <li><a href="#">LinkedIn</a></li>
-              <li><a href="#">Behance</a></li>
-            </ul>
-          </div>
-        </div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <div class="footer__logo">Nova Digital</div>
+        <p class="footer__description">
+          Creative digital marketing agency focused on growth, branding and performance.
+        </p>
       </div>
-      <div class="footer__bottom">
-        <p>© 2026 Nova Digital. All rights reserved.</p>
-        <p>Designed for performance & accessibility.</p>
+      <div class="footer__nav">
+        <div>
+          <h3 class="footer__column-title">Navigation</h3>
+          <ul class="footer__list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#cases">Cases</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="footer__list">
+            <li><a href="#process">Process</a></li>
+            <li><a href="#reviews">Testimonials</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="footer__column-title">Social</h3>
+          <ul class="footer__list">
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">Behance</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-  </footer>
+    <div class="footer__bottom">
+      <p>© 2026 Nova Digital. All rights reserved.</p>
+      <p>Designed for performance & accessibility.</p>
+    </div>
+  </div>
+</footer>
 <script src="js/functions/lazyImg.js" defer></script>
 <!-- Розкоментуйте для проведення аналізу доступності верстки -->
 <!-- <script src="js/functions/a11y-checker.js" defer></script> -->
 <!-- Розкоментуйте для проведення аналізу доступності верстки -->
 <script type="module" src="js/app.js"></script>
-  <script>
-    const themeToggle = document.querySelector('.theme-toggle');
-    const html = document.documentElement;
+<script>
+  const themeToggle = document.querySelector('.theme-toggle');
+  const html = document.documentElement;
 
-    const savedTheme = localStorage.getItem('theme');
+  const savedTheme = localStorage.getItem('theme');
 
-    if (savedTheme) {
-      html.setAttribute('data-theme', savedTheme);
-    } else {
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      html.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+  if (savedTheme) {
+    html.setAttribute('data-theme', savedTheme);
+  } else {
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    html.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+  }
+
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = html.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+    html.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+
+  const revealElements = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('reveal--active');
+        }
+      });
+    },
+    {
+      threshold: 0.15,
     }
+  );
 
-    themeToggle.addEventListener('click', () => {
-      const currentTheme = html.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+  revealElements.forEach(element => {
+    observer.observe(element);
+  });
 
-      html.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-    });
+  const body = document.body;
 
-    const revealElements = document.querySelectorAll('.reveal');
+  function toggleScrollLock() {
+    if (window.location.hash === '#contacts') {
+      body.classList.add('no-scroll');
+    } else {
+      body.classList.remove('no-scroll');
+    }
+  }
 
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('reveal--active');
-          }
-        });
-      },
-      {
-        threshold: 0.15,
-      }
-    );
-
-    revealElements.forEach(element => {
-      observer.observe(element);
-    });
-  </script>
+  window.addEventListener('hashchange', toggleScrollLock);
+  window.addEventListener('load', toggleScrollLock);
+</script>
 <script>
   window.addEventListener('load', () => {
     setTimeout(() => {
