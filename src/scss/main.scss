@@ -4,6 +4,7 @@
 @use 'partials/header';
 @use 'partials/footer';
 @use 'components/hero';
+@use 'components/about';
 
 /* =========================================================
 RESET
@@ -212,5 +213,19 @@ SECTIONS
 
   100% {
     transform: translateY(0px);
+  }
+}
+
+@keyframes float-geometric {
+  0% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-20px) translateX(10px) rotate(10deg);
+  }
+
+  100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg);
   }
 }
