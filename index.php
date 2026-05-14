@@ -16,6 +16,7 @@ Template Name: Front Page
         endwhile;
     endif;
     ?>
+    <?php get_template_part('template-parts/components/contacts'); ?>
 </main>
 
 <?php get_footer(); ?>
