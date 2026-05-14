@@ -1,1 +1,0 @@
-function currentPage(){let t=window.location.pathname.split("/").pop()||"index.html";document.querySelectorAll(".nav__link").forEach(e=>{e.getAttribute("href")===t&&e.classList.add("currentPage")})}export{currentPage};
