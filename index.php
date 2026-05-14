@@ -5,7 +5,7 @@ Template Name: Front Page
 ?>
 <?php get_header(); ?>
 
-<main>
+<main class="wrapper" id="main-content">
     <?php
     if (have_rows('flexible_content')):
         while (have_rows('flexible_content')):
@@ -13,7 +13,6 @@ Template Name: Front Page
             get_template_part(
                 'template-parts/components/' . get_row_layout()
             );
-
         endwhile;
     endif;
     ?>
